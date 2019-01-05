@@ -1,0 +1,516 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>JAVA 8 新特性（汪文军） · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="JAVA 8 新特性（汪文军）.html">
+            
+                <a href="JAVA 8 新特性（汪文军）.html">
+            
+                    
+                    JAVA 8 新特性（汪文军）
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    具体
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" >
+            
+                <span>
+            
+                    
+                    具体
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" >
+            
+                <span>
+            
+                    
+                    具体
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >JAVA 8 新特性（汪文军）</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="java-8-&#x65B0;&#x7279;&#x6027;&#xFF08;&#x6C6A;&#x6587;&#x519B;&#xFF09;">JAVA 8 &#x65B0;&#x7279;&#x6027;&#xFF08;&#x6C6A;&#x6587;&#x519B;&#xFF09;</h2>
+<h3 id="1-lambda&#x8BED;&#x6CD5;">1. Lambda&#x8BED;&#x6CD5;</h3>
+<p>(1) () -&gt; {}
+(2) () -&gt; &quot;Raoul&quot;
+(3) () -&gt; {return &quot;Mario&quot;;}   // &#x5B58;&#x5728;&#x8BED;&#x53E5;&#xFF0C;&#x6700;&#x5916;&#x5C42;&#x9700;&#x8981;&#x6709;&#x5927;&#x62EC;&#x53F7;</p>
+<h4 id="11-&#x65B9;&#x6CD5;&#x5F15;&#x7528;">1.1 &#x65B9;&#x6CD5;&#x5F15;&#x7528;</h4>
+<p><img src="1541944317889.png" alt="1541944317889"></p>
+<h3 id="2-stream&#x7528;&#x6CD5;">2. Stream&#x7528;&#x6CD5;</h3>
+<h4 id="21-&#x521B;&#x5EFA;stream">2.1 &#x521B;&#x5EFA;stream</h4>
+<p>&#x4ECE;&#x96C6;&#x5408;&#xFF0C;&#x503C;&#xFF0C;&#x6570;&#x7EC4;&#x4E2D;&#x521B;&#x5EFA;</p>
+<pre><code class="lang-java">    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Stream&lt;String&gt; <span class="hljs-title">FromCollection</span><span class="hljs-params">()</span> </span>{
+        List&lt;String&gt; list = Arrays.asList(<span class="hljs-string">&quot;hello&quot;</span>, <span class="hljs-string">&quot;alex&quot;</span>, <span class="hljs-string">&quot;wangwenjun&quot;</span>);
+        <span class="hljs-keyword">return</span> list.stream();
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Stream&lt;String&gt; <span class="hljs-title">fromValues</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> Stream.of(<span class="hljs-string">&quot;hello&quot;</span>, <span class="hljs-string">&quot;alex&quot;</span>, <span class="hljs-string">&quot;wangwenjun&quot;</span>, <span class="hljs-string">&quot;world&quot;</span>, <span class="hljs-string">&quot;stream&quot;</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Stream&lt;String&gt; <span class="hljs-title">fromArrays</span><span class="hljs-params">()</span> </span>{
+        String[] strings = {<span class="hljs-string">&quot;hello&quot;</span>, <span class="hljs-string">&quot;alex&quot;</span>, <span class="hljs-string">&quot;wangwenjun&quot;</span>, <span class="hljs-string">&quot;world&quot;</span>, <span class="hljs-string">&quot;stream&quot;</span>};
+        <span class="hljs-keyword">return</span> Arrays.stream(strings);
+    }
+</code></pre>
+<h4 id="22-stream&#x7684;&#x4F7F;&#x7528;">2.2 stream&#x7684;&#x4F7F;&#x7528;</h4>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SimpleStream</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+       <span class="hljs-comment">//have a dish list (menu)</span>
+    List&lt;Dish&gt; menu = Arrays.asList(
+            <span class="hljs-keyword">new</span> Dish(<span class="hljs-string">&quot;pork&quot;</span>, <span class="hljs-keyword">false</span>, <span class="hljs-number">800</span>, Dish.Type.MEAT),
+            <span class="hljs-keyword">new</span> Dish(<span class="hljs-string">&quot;beef&quot;</span>, <span class="hljs-keyword">false</span>, <span class="hljs-number">700</span>, Dish.Type.MEAT),
+            <span class="hljs-keyword">new</span> Dish(<span class="hljs-string">&quot;chicken&quot;</span>, <span class="hljs-keyword">false</span>, <span class="hljs-number">400</span>, Dish.Type.MEAT),
+            <span class="hljs-keyword">new</span> Dish(<span class="hljs-string">&quot;french fries&quot;</span>, <span class="hljs-keyword">true</span>, <span class="hljs-number">530</span>, Dish.Type.OTHER),
+            <span class="hljs-keyword">new</span> Dish(<span class="hljs-string">&quot;rice&quot;</span>, <span class="hljs-keyword">true</span>, <span class="hljs-number">350</span>, Dish.Type.OTHER),
+            <span class="hljs-keyword">new</span> Dish(<span class="hljs-string">&quot;season fruit&quot;</span>, <span class="hljs-keyword">true</span>, <span class="hljs-number">120</span>, Dish.Type.OTHER),
+            <span class="hljs-keyword">new</span> Dish(<span class="hljs-string">&quot;pizza&quot;</span>, <span class="hljs-keyword">true</span>, <span class="hljs-number">550</span>, Dish.Type.OTHER),
+            <span class="hljs-keyword">new</span> Dish(<span class="hljs-string">&quot;prawns&quot;</span>, <span class="hljs-keyword">false</span>, <span class="hljs-number">300</span>, Dish.Type.FISH),
+            <span class="hljs-keyword">new</span> Dish(<span class="hljs-string">&quot;salmon&quot;</span>, <span class="hljs-keyword">false</span>, <span class="hljs-number">450</span>, Dish.Type.FISH));
+<span class="hljs-comment">// &#x8FC7;&#x6EE4;&#xFF0C;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x4FDD;&#x7559;&#x4E0B;&#x6765;</span>
+        List&lt;Dish&gt; menuP = menu.stream()
+                .filter(a -&gt; a.getName().startsWith(<span class="hljs-string">&quot;p&quot;</span>))
+                .collect(toList());
+<span class="hljs-comment">// &#x53D6;&#x51FA;&#x67D0;&#x4E9B;&#x5B57;&#x6BB5;&#x91CD;&#x7EC4;&#x4E3A;List</span>
+        List&lt;Dish.Type&gt; menuM = menu.stream()
+                .map(Dish::getType)
+                .collect(toList());
+<span class="hljs-comment">// calories &#x5347;&#x5E8F;&#x6392;&#x5E8F;</span>
+        List&lt;Dish&gt; menuS = menu.stream().sorted(
+                Comparator.comparing(Dish::getCalories))
+                .collect(toList());
+<span class="hljs-comment">// calories &#x5347;&#x5E8F;&#x6392;&#x5E8F; Comparator&#x5F53;&#x4E2D;&#x6709;&#x5F88;&#x591A;&#x65B9;&#x6CD5;&#xFF0C;&#x5982;comparingLong</span>
+        menu.sort(Comparator.comparingInt(Dish::getCalories));
+<span class="hljs-comment">// distinct() &#x5FC5;&#x987B;&#x8981;&#x6C42;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;Dish&#x91CD;&#x5199;hashCode&#x548C;equal</span>
+        List&lt;Dish&gt; menuDis = menu.stream()
+                .distinct()
+                .collect(toList()); 
+<span class="hljs-comment">// findFirst()&#x7528;&#x6CD5;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;</span>
+        Optional&lt;Dish&gt; menuF = menu.stream()
+                .distinct().findFirst();
+        menuF.ifPresent(a-&gt; System.out.println(a));
+
+<span class="hljs-comment">// allMatch()&#x5FC5;&#x987B;&#x5168;&#x90E8;&#x5339;&#x914D;&#x6210;&#x529F;&#x624D;&#x6B63;&#x786E;&#xFF0C;&#x8FD8;&#x6709;anyMatch()&#xFF0C;noneMatch()</span>
+        <span class="hljs-keyword">boolean</span> matched =  menu.stream().allMatch(i -&gt; i.getCalories() &gt; <span class="hljs-number">400</span>);
+<span class="hljs-comment">// reduce()&#x7528;&#x6CD5; reduce&#x5728;&#x6C42;&#x548C;&#x3001;&#x6C42;&#x6700;&#x5927;&#x6700;&#x5C0F;&#x503C;&#x7B49;&#x65B9;&#x9762;&#x90FD;&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x7684;&#x5B9E;&#x73B0;</span>
+        Optional&lt;Integer&gt; menuRe =  menu.stream().map(Dish::getCalories).reduce((a,b)-&gt;a&gt;b?a:b);
+        Integer max = s.reduce(<span class="hljs-keyword">new</span> BinaryOperator&lt;Integer&gt;() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> Integer <span class="hljs-title">apply</span><span class="hljs-params">(Integer integer, Integer integer2)</span> </span>{
+                <span class="hljs-keyword">return</span> integer &gt;= integer2 ? integer : integer2;
+            }
+        }).get();
+ <span class="hljs-comment">/**
+ * &#x6C42;&#x6700;&#x5927;&#x503C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5199;&#x6210;Lambda&#x8BED;&#x6CD5;&#xFF1A;
+ * Integer max = s.reduce((a, b) -&gt; a &gt;= b ? a : b).get();
+ */</span>       
+}
+</code></pre>
+<h3 id="3-optional&#x7528;&#x6CD5;">3. Optional&#x7528;&#x6CD5;</h3>
+<pre><code class="lang-java"><span class="hljs-comment">// &#x5982;&#x679C;&#x5305;&#x88C5;&#x7684;&#x4E1C;&#x897F;&#x91CC;&#x9762;&#x4E0D;&#x4E3A;null&#xFF0C;&#x624D;&#x4F1A;&#x6267;&#x884C;ifPresent()&#x91CC;&#x9762;&#x7684;&#x4E1C;&#x897F;</span>
+Optional.ofNullable(<span class="hljs-keyword">null</span>).ifPresent(t -&gt; {
+            System.out.println(<span class="hljs-string">&quot;abc&quot;</span>);
+            System.out.println(<span class="hljs-string">&quot;abc&quot;</span>);
+            System.out.println(<span class="hljs-string">&quot;abc&quot;</span>);
+            System.out.println(<span class="hljs-string">&quot;abc&quot;</span>);
+        }
+);
+</code></pre>
+<pre><code class="lang-java"> <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">getInsuranceName</span><span class="hljs-params">(Insurance insurance)</span> </span>{
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">null</span> == insurance)
+            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;unknown&quot;</span>;
+        <span class="hljs-keyword">return</span> insurance.getName();
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">getInsuranceNameByOptional</span><span class="hljs-params">(Insurance insurance)</span> </span>{
+        <span class="hljs-keyword">return</span>     Optional.ofNullable(insurance).map(Insurance::getName).orElse(<span class="hljs-string">&quot;unknown&quot;</span>);
+    }
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-comment">// &#x9632;&#x6B62;List&#x7ED3;&#x679C;&#x4E3A;NULL&#x65F6;&#x7684;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF0C;&#x6570;&#x636E;&#x67E5;&#x8BE2;&#x672A;NULL&#x7684;&#x5904;&#x7406;</span>
+List&lt;Apple&gt; greenList = list.stream().filter(a -&gt; a.getColor().equals(<span class="hljs-string">&quot;green&quot;</span>)).collect(Collectors.toList());
+    Optional.ofNullable(greenList).ifPresent(System.out::println);
+</code></pre>
+<h3 id="4-collector&#x7528;&#x6CD5;">4. Collector&#x7528;&#x6CD5;</h3>
+<pre><code class="lang-java">   List&lt;Apple&gt; list = Arrays.asList(<span class="hljs-keyword">new</span> Apple(<span class="hljs-string">&quot;green&quot;</span>, <span class="hljs-number">150</span>)
+                , <span class="hljs-keyword">new</span> Apple(<span class="hljs-string">&quot;yellow&quot;</span>, <span class="hljs-number">120</span>)
+                , <span class="hljs-keyword">new</span> Apple(<span class="hljs-string">&quot;green&quot;</span>, <span class="hljs-number">170</span>)
+                , <span class="hljs-keyword">new</span> Apple(<span class="hljs-string">&quot;green&quot;</span>, <span class="hljs-number">150</span>)
+                , <span class="hljs-keyword">new</span> Apple(<span class="hljs-string">&quot;yellow&quot;</span>, <span class="hljs-number">120</span>)
+                , <span class="hljs-keyword">new</span> Apple(<span class="hljs-string">&quot;green&quot;</span>, <span class="hljs-number">170</span>));
+<span class="hljs-comment">// &#x5206;&#x7EC4;&#x65B9;&#x5F0F;&#x4E00;</span>
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Map&lt;String, List&lt;Apple&gt;&gt; groupByNormal(List&lt;Apple&gt; apples) {
+        Map&lt;String, List&lt;Apple&gt;&gt; map = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+        <span class="hljs-keyword">for</span> (Apple a : apples) {
+            List&lt;Apple&gt; list = map.get(a.getColor());
+            <span class="hljs-keyword">if</span> (<span class="hljs-keyword">null</span> == list) {
+                list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+                map.put(a.getColor(), list);
+            }
+            list.add(a);
+        }
+        <span class="hljs-keyword">return</span> map;
+    }
+<span class="hljs-comment">// &#x5206;&#x7EC4;&#x65B9;&#x5F0F;&#x4E8C;</span>
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Map&lt;String, List&lt;Apple&gt;&gt; groupByFunction(List&lt;Apple&gt; apples) {
+        Map&lt;String, List&lt;Apple&gt;&gt; map = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+        apples.parallelStream().forEach(a -&gt; {
+            List&lt;Apple&gt; colorList = Optional.ofNullable(map.get(a.getColor())).orElseGet(() -&gt; {
+                List&lt;Apple&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+                map.put(a.getColor(), list);
+                <span class="hljs-keyword">return</span> list;
+            });
+            colorList.add(a);
+        });
+        <span class="hljs-keyword">return</span> map;
+    }
+</code></pre>
+<p>Collectors&#x6C42;&#x5E73;&#x5747;&#x503C;</p>
+<pre><code class="lang-java">Optional.ofNullable(menu.stream().collect(Collectors.averagingDouble(Dish::getCalories))).ifPresent(System.out::println);
+</code></pre>
+<p>Collectors&#x8FDB;&#x884C;&#x5206;&#x7EC4;</p>
+<pre><code>private static Map&lt;String, List&lt;Apple&gt;&gt; groupByCollector(List&lt;Apple&gt; apples) {
+        return apples.parallelStream().collect(groupingBy(Apple::getColor));
+    }
+</code></pre><h3 id="5-&#x65B0;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;">5. &#x65B0;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;</h3>
+<p>LocalDate&#x3001; LocalTime&#x3001; Instant&#x3001; Duration &#x4EE5;&#x53CA; Period</p>
+<pre><code>    private static void testLocalDate() {
+        LocalDate localDate = LocalDate.of(2016, 11, 13);
+        System.out.println(localDate.getYear());
+        System.out.println(localDate.getMonth());
+        System.out.println(localDate.getMonthValue());
+        System.out.println(localDate.getDayOfYear());
+        System.out.println(localDate.getDayOfMonth());
+        System.out.println(localDate.getDayOfWeek());
+
+        localDate.get(ChronoField.DAY_OF_MONTH);
+    }
+</code></pre><pre><code>   private static void testLocalTime() {
+        LocalTime time = LocalTime.now();
+        System.out.println(time.getHour());
+        System.out.println(time.getMinute());
+        System.out.println(time.getSecond());
+    }
+</code></pre><pre><code> private static void combineLocalDateAndTime() {
+        LocalDate localDate = LocalDate.now();
+        LocalTime time = LocalTime.now();
+
+        LocalDateTime localDateTime = LocalDateTime.of(localDate, time);
+        System.out.println(localDateTime.toString());
+        LocalDateTime now = LocalDateTime.now();
+        System.out.println(now);
+    }
+</code></pre><pre><code>private static void testInstant() throws InterruptedException {
+        Instant start = Instant.now();
+        Thread.sleep(1000L);
+        Instant end = Instant.now();
+        Duration duration = Duration.between(start, end);
+        System.out.println(duration.toMillis());
+    }
+
+private static void testDuration() {
+    LocalTime time = LocalTime.now();
+    LocalTime beforeTime = time.minusHours(1);
+    Duration duration = Duration.between(time, beforeTime);
+    System.out.println(duration.toHours());
+}
+
+private static void testPeriod() {
+    Period period = Period.between(LocalDate.of(2014, 1, 10), LocalDate.of(2016, 1, 10));
+    System.out.println(period.getMonths());
+    System.out.println(period.getDays());
+    System.out.println(period.getYears());
+}
+
+private static void testDateFormat() {
+    LocalDate localDate = LocalDate.now();
+    LocalDateTime localDateTime=LocalDateTime.now();
+    String format1 = localDate.format(DateTimeFormatter.BASIC_ISO_DATE);
+    String format2 = localDateTime.format(DateTimeFormatter.ISO_DATE_TIME);
+    System.out.println(format1);
+    System.out.println(format2);
+
+    DateTimeFormatter mySelfFormatter = DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd&quot;);
+    String format = localDate.format(mySelfFormatter);
+    System.out.println(format);
+}
+
+private static void testDateParse() {
+    String date1 = &quot;20161113&quot;;
+    LocalDate localDate = LocalDate.parse(date1, DateTimeFormatter.BASIC_ISO_DATE);
+    System.out.println(localDate);
+
+    DateTimeFormatter mySelfFormatter = DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd&quot;);
+    String date2 = &quot;2016-11-13&quot;;
+    LocalDate localDate2 = LocalDate.parse(date2, mySelfFormatter);
+    System.out.println(localDate2);
+}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 概述">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"JAVA 8 新特性（汪文军）","level":"1.2","depth":1,"next":{"title":"具体","level":"1.2.1","depth":2,"ref":"","articles":[{"title":"具体","level":"1.2.1.1","depth":3,"ref":"","articles":[]},{"title":"具体","level":"1.2.1.2","depth":3,"ref":"","articles":[]}]},"previous":{"title":"概述","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["splitter","livereload"],"pluginsConfig":{"splitter":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JAVA 8 新特性（汪文军）.md","mtime":"2019-01-05T13:01:38.549Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-01-05T13:07:22.990Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
