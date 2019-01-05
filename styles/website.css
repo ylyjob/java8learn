@@ -1,0 +1,4 @@
+/* Reduce size of logo to allow long versions like 3.0.0-pre.1 */
+.page-inner {
+    max-width: 1100px;
+}

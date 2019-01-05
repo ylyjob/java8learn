@@ -1,6 +1,6 @@
 
 
-## JAVA 8 新特性的用法
+## JAVA 8 新特性（汪文军）
 
 
 
@@ -12,7 +12,7 @@
 
 #### 1.1 方法引用
 
-![1541944317889](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1541944317889.png)
+![1541944317889](1541944317889.png)
 
 ### 2. Stream用法
 
